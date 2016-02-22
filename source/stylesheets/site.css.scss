@@ -1,6 +1,165 @@
 @charset "utf-8";
 @import "normalize";
+@import "variables";
+
+%three-column-list {
+  text-align: center;
+  @media screen and (min-width: $big-mobile) {
+    width: 33.333%;
+    float: left;
+  }
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  background: #aac83e;
+  font-family: "PT Sans", sans-serif;
+  color: $dark;
+  font-size: 14px;
+  background: white;
+  min-height: 100%;
+  line-height: 1.5;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+  }
+}
+
+h1 {
+  color: $cyan;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+section {
+  overflow: hidden;
+}
+
+.wrapper {
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+header {
+  height: 6rem;
+  border-bottom: 0.5rem solid $blue-light;
+
+  .wrapper {
+    height: 100%;
+  }
+}
+
+.logo {
+  height: 100%;
+  padding: 1rem 0;
+  float: left;
+}
+
+.navigation {
+  float: right;
+}
+
+.nav-item {
+  display: inline-block;
+  float: left;
+
+  a {
+    line-height: 6rem;
+    padding: 0 2rem;
+  }
+}
+
+.banner {
+  background: url("../images/pies.jpg") center center no-repeat;
+  background-size: cover;
+  height: 60%;
+  padding: 8rem 4rem;
+}
+
+.banner-title {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: $dark;
+  text-align: left;
+
+  .big-text {
+    font-size: 2rem;
+  }
+}
+
+.offer-item {
+  @extend %three-column-list;
+}
+
+.service-item {
+  margin: 0 0 1.5rem;
+}
+
+.quote-wrapper {
+  background-color: $blue-light;
+  padding: 4rem;
+}
+
+.quote {
+  max-width: 700px;
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $asphalt;
+}
+
+.quote-decor {
+  margin: 0 auto;
+  font-size: 10rem;
+  line-height: 1rem;
+  margin-top: 4rem;
+  color: $accent;
+}
+
+.quote-content {
+  margin: 0 0 1rem;
+}
+
+.quote-author {
+  font-size: 1.2rem;
+  color: $blue-grey;
+}
+
+.vet {
+  @extend %three-column-list;
+}
+
+.vet-photo-holder {
+  margin: 0 auto 2rem;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  border: 0.4rem solid $blue-light;
+  overflow: hidden;
+}
+
+.vet-photo {
+  width: 100%;
+}
+
+.vet-description {
+  max-width: 80%;
+  margin: 1rem auto;
 }

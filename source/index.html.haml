@@ -1,1 +1,74 @@
-
+%header
+  .wrapper
+    %img.logo{:src => "images/vetmed_logo.png"}
+    %nav{:role => "navigation"}
+      %ul.navigation
+        %li.nav-item
+          %a{:href => "#"}
+            USŁUGI
+        %li.nav-item
+          %a{:href => "#"}
+            LEKARZE
+        %li.nav-item
+          %a{:href => "#"}
+            KONTAKT
+%section.banner
+  .wrapper
+    %h1.banner-title
+      Pierwsza prywatna
+      %br
+      %span.big-text przychodnia weterynaryjna w Tychach.
+    %h1.banner-title Lekarze z ponad 25 letnim doświadczeniem.
+    %h1.banner-title
+      Usługi w zakresie lecznictwa i profilaktyki
+      %br
+      chorób małych zwierząt.
+%section.wrapper
+  %h1 Oferowane usługi
+  %ul.offer
+    %li.offer-item
+      %h2 Profilaktyka
+      %ul
+        %li.service-item szczepienia
+        %li.service-item odrobaczania
+    %li.offer-item
+      %h2 Diagnostyka i leczenie
+      %ul
+        %li.service-item
+          badania laboratoryjne
+          %br
+          (hematologia, biochemia)
+        %li.service-item USG, EKG
+        %li.service-item laseroterapia, krioterapia
+        %li.service-item chirurgia
+    %li.offer-item
+      %h2 Sklepik
+      %ul
+        %li.service-item karmy i diety lecznicze
+        %li.service-item paszporty i mikroczipy
+%section.quote-wrapper
+  .quote
+    .quote-decor ”
+    %p.quote-content
+      „Ekstra sprawa, świetne słuchawki, pieskowi odrosła łapa.
+      %br
+      Ma teraz pięć! Pozdrawiam.”
+    %p.quote-author - Małgorzata Belzebub
+%section.wrapper
+  %h1 Nasi lekarze
+  %ul.vets
+    %li.vet
+      .vet-photo-holder
+        %img.vet-photo{:src => "images/daddy.jpeg"}
+      %h2 Bogusław Grzeszczuk
+      %p.vet-description Absolwent Wydziału Weterynarii Akademii Rolniczej we Wrocławiu z 1988 roku. Specjalista chorób psów i kotów.
+    %li.vet
+      .vet-photo-holder
+        %img.vet-photo{:src => "images/alex.jpg"}
+      %h2 Dariusz Kamiński
+      %p.vet-description Absolwent Wydziału Weterynarii Akademii Rolniczej we Wrocławiu z 1989 roku.
+    %li.vet
+      .vet-photo-holder
+        %img.vet-photo{:src => "images/bill.jpg"}
+      %h2 Wiesław Rutka
+      %p.vet-description Absolwent Wydziału Weterynarii Akademii Rolniczej we Wrocławiu z 1985 roku. Specjalista chorób psów i kotów. Specjalista chirurg.
