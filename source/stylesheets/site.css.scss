@@ -10,6 +10,13 @@
   }
 }
 
+%two-column-thing {
+  @media screen and (min-width: $big-mobile) {
+    width: 50%;
+    float: left;
+  }
+}
+
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -162,4 +169,27 @@ header {
 .vet-description {
   max-width: 80%;
   margin: 1rem auto;
+}
+
+.contact {
+  @extend %two-column-thing;
+  text-align: left;
+}
+
+.contact-section {
+  margin-bottom: 3rem;
+
+  h2 {
+    color: $cyan;
+  }
+}
+
+.map {
+  @extend %two-column-thing;
+  text-align: right;
+}
+
+.google-map {
+  width: 80%;
+  margin: 0 4rem;
 }
