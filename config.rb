@@ -10,3 +10,10 @@ configure :build do
   # activate :minify_css
   # activate :minify_javascript
 end
+
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  deploy.branch = 'master'
+  deploy.commit_message = 'Deploy :rocket:'
+  deploy.build_before = true
+end
