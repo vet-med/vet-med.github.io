@@ -1,0 +1,26 @@
+offer:
+  - section: "Profilaktyka"
+    items:
+      - "szczepienia"
+      - "odrobaczania"
+  - section: "Diagnostyka i leczenie"
+    items:
+      - "badania laboratoryjne<br/>(hematologia, biochemia)"
+      - "USG, EKG"
+      - "laseroterapia, krioterapia"
+      - "chirurgia"
+  - section: "Sklepik"
+    items:
+      - "karmy i diety lecznicze"
+      - "paszporty i mikroczipy"
+
+vets:
+  - id: "grzeszczuk"
+    name: "Bogusław Grzeszczuk"
+    description: "Absolwent Wydziału Weterynarii Akademii Rolniczej we Wrocławiu z 1988 roku. Specjalista chorób psów i kotów."
+  - id: "kaminski"
+    name: "Dariusz Kamiński"
+    description: "Absolwent Wydziału Weterynarii Akademii Rolniczej we Wrocławiu z 1989 roku."
+  - id: "rutka"
+    name: "Wiesław Rutka"
+    description: "Absolwent Wydziału Weterynarii Akademii Rolniczej we Wrocławiu z 1985 roku. Specjalista chorób psów i kotów. Specjalista chirurg."

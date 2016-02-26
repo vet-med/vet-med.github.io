@@ -26,26 +26,12 @@
 %section.wrapper
   %h1 Oferowane usługi
   %ul.offer
-    %li.offer-item
-      %h2 Profilaktyka
-      %ul
-        %li.service-item szczepienia
-        %li.service-item odrobaczania
-    %li.offer-item
-      %h2 Diagnostyka i leczenie
-      %ul
-        %li.service-item
-          badania laboratoryjne
-          %br
-          (hematologia, biochemia)
-        %li.service-item USG, EKG
-        %li.service-item laseroterapia, krioterapia
-        %li.service-item chirurgia
-    %li.offer-item
-      %h2 Sklepik
-      %ul
-        %li.service-item karmy i diety lecznicze
-        %li.service-item paszporty i mikroczipy
+    - data.all.offer.each do |offer|
+      %li.offer-item
+        %h2= offer.section
+        %ul
+          - offer.items.each do |item|
+            %li.service-item= item
 %section.quote-wrapper
   .quote
     .quote-decor ”
@@ -55,21 +41,12 @@
 %section.wrapper
   %h1 Nasi lekarze
   %ul.vets
-    %li.vet
-      .vet-photo-holder
-        %img.vet-photo{:src => "images/daddy.jpeg"}
-      %h2 Bogusław Grzeszczuk
-      %p.vet-description Absolwent Wydziału Weterynarii Akademii Rolniczej we Wrocławiu z 1988 roku. Specjalista chorób psów i kotów.
-    %li.vet
-      .vet-photo-holder
-        %img.vet-photo{:src => "images/alex.jpg"}
-      %h2 Dariusz Kamiński
-      %p.vet-description Absolwent Wydziału Weterynarii Akademii Rolniczej we Wrocławiu z 1989 roku.
-    %li.vet
-      .vet-photo-holder
-        %img.vet-photo{:src => "images/bill.jpg"}
-      %h2 Wiesław Rutka
-      %p.vet-description Absolwent Wydziału Weterynarii Akademii Rolniczej we Wrocławiu z 1985 roku. Specjalista chorób psów i kotów. Specjalista chirurg.
+    - data.all.vets.each do |vet|
+      %li.vet
+        .vet-photo-holder
+          %img.vet-photo{:src => "images/#{vet.id}.jpg"}
+        %h2= vet.name
+        %p.vet-description= vet.description
 %section.quote-wrapper
   .quote
     %p.quote-content
@@ -96,4 +73,4 @@
         %br
         niedziela: 9:00 - 12:00
   .map
-    %img.google-map{:src => "images/bill.jpg"}
+    %img.google-map{:src => lorem.image('500x500')}
