@@ -35,9 +35,9 @@
 %section.quote-wrapper
   .quote
     .quote-decor ”
-    %p.quote-content
-      „Ekstra sprawa, świetne słuchawki, pieskowi odrosła łapa. Ma teraz pięć! Pozdrawiam.”
-    %p.quote-author - Małgorzata Belzebub
+    - quote = data.quotes.sample
+    %p.quote-content= quote.content
+    %p.quote-author - #{quote.author}
 %section.wrapper
   %h1 Nasi lekarze
   %ul.vets
