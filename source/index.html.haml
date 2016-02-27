@@ -49,28 +49,21 @@
         %p.vet-description= vet.description
 %section.quote-wrapper
   .quote
-    %p.quote-content
-      Coś tutaj
+    .quote-decor ”
+    - quote = data.quotes.sample
+    %p.quote-content= quote.content
+    %p.quote-author - #{quote.author}
 %section.wrapper
   %h1 Kontakt
   .contact
     .contact-section
-      %h2 Vet-Med przychodnia weterynaryjna
-      %p
-        ul. Dębowa 6a
-        %br
-        43-100 Tychy
-      %p
-        telefon: (32) 227 31 12
-      %p
-        email: vet.med.tychy@gmail.com
+      - contact = data.all.contact
+      %h2= contact.name
+      %p= contact.address
+      %p telefon: #{contact.phone}
     .contact-section
       %h2 Godziny otwarcia
-      %p
-        poniedziałek - piątek: 8:00 - 20:00
-        %br
-        sobota: 8:00 - 12:00
-        %br
-        niedziela: 9:00 - 12:00
+      - data.all.opening_hours.each do |open|
+        %p #{open.days}: #{open.hours}
   .map
     %img.google-map{:src => lorem.image('500x500')}

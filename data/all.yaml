@@ -24,3 +24,17 @@ vets:
   - id: "rutka"
     name: "Wiesław Rutka"
     description: "Absolwent Wydziału Weterynarii Akademii Rolniczej we Wrocławiu z 1985 roku. Specjalista chorób psów i kotów. Specjalista chirurg."
+
+contact:
+  name: "Vet-Med Bis s.c."
+  address: "ul. Dębowa 6a<br/>43-100 Tychy"
+  phone: "(32) 227 31 12"
+  email: "vet.med.tychy@gmail.com"
+
+opening_hours:
+  - days: "poniedziałek - piątek"
+    hours: "8:00 - 20:00"
+  - days: "sobota"
+    hours: "8:00 - 12:00"
+  - days: "niedziela"
+    hours: "9:00 - 12:00"
