@@ -360,6 +360,11 @@ th {
       width: 33.333%;
       float: left; } }
 
+@media screen and (min-width: 768px) {
+  .contact, .map {
+    width: 50%;
+    float: left; } }
+
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -476,3 +481,18 @@ header {
 .vet-description {
   max-width: 80%;
   margin: 1rem auto; }
+
+.contact {
+  text-align: left; }
+
+.contact-section {
+  margin-bottom: 3rem; }
+  .contact-section h2 {
+    color: #20CFE4; }
+
+.map {
+  text-align: right; }
+
+.google-map {
+  width: 80%;
+  margin: 0 4rem; }
