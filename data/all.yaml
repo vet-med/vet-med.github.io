@@ -6,7 +6,7 @@ offer:
   - section: "Diagnostyka i leczenie"
     items:
       - "badania laboratoryjne<br/>(hematologia, biochemia)"
-      - "USG, EKG"
+      - "USG, EKG, Rtg"
       - "laseroterapia, krioterapia"
       - "chirurgia"
   - section: "Sklepik"
@@ -26,10 +26,10 @@ vets:
     description: "Absolwent Wydziału Weterynarii Akademii Rolniczej we Wrocławiu z 1985 roku. Specjalista chorób psów i kotów. Specjalista chirurg."
 
 contact:
-  name: "Vet-Med Bis s.c."
+  name: "Vet-Med-Bis s.c."
   address: "ul. Dębowa 6a<br/>43-100 Tychy"
   phone: "(32) 227 31 12"
-  email: "vet.med.tychy@gmail.com"
+  email: "vet.med.bis@gmail.com"
 
 opening_hours:
   - days: "poniedziałek - piątek"
