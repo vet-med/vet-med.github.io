@@ -1,15 +1,18 @@
 offer:
   - section: "Profilaktyka"
+    id: prevention
     items:
       - "szczepienia"
       - "odrobaczania"
   - section: "Diagnostyka i leczenie"
+    id: diagnostics
     items:
       - "badania laboratoryjne<br/>(hematologia, biochemia)"
       - "USG, EKG, Rtg"
       - "laseroterapia, krioterapia"
       - "chirurgia"
   - section: "Sklepik"
+    id: shop
     items:
       - "karmy i diety lecznicze"
       - "paszporty i mikroczipy"
@@ -17,13 +20,13 @@ offer:
 vets:
   - id: "grzeszczuk"
     name: "Bogusław Grzeszczuk"
-    description: "Absolwent Wydziału Weterynarii Akademii Rolniczej we Wrocławiu z 1988 roku. Specjalista chorób psów i kotów."
+    description: "Absolwent Wydziału Weterynarii Akademii Rolniczej we Wrocławiu z 1988 roku. Specjalista chorób psów i&nbsp;kotów."
   - id: "kaminski"
     name: "Dariusz Kamiński"
     description: "Absolwent Wydziału Weterynarii Akademii Rolniczej we Wrocławiu z 1989 roku."
   - id: "rutka"
     name: "Wiesław Rutka"
-    description: "Absolwent Wydziału Weterynarii Akademii Rolniczej we Wrocławiu z 1985 roku. Specjalista chorób psów i kotów. Specjalista chirurg."
+    description: "Absolwent Wydziału Weterynarii Akademii Rolniczej we Wrocławiu z 1985 roku. Specjalista chorób psów i&nbsp;kotów. Specjalista chirurg."
 
 contact:
   name: "Vet-Med-Bis s.c."

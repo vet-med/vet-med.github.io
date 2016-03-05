@@ -4,9 +4,11 @@
 
 %three-column-list {
   text-align: center;
+  margin: 0 0 4rem;
   @media screen and (min-width: $big-mobile) {
     width: 33.333%;
     float: left;
+    margin: 0;
   }
 }
 
@@ -49,7 +51,7 @@ body {
 h1 {
   color: $cyan;
   text-align: center;
-  margin: 3rem 0;
+  margin: 0 0 3rem;
 }
 
 section {
@@ -62,9 +64,22 @@ section {
   padding: 0 2rem;
 }
 
+.header-wrapper {
+  max-width: 1420px;
+  margin: 0 auto;
+  height: 100%;
+
+  @media screen and (min-width: $big-mobile) {
+    padding: 0 2rem;
+  }
+}
+
 header {
-  height: 6rem;
   border-bottom: 0.5rem solid $blue-light;
+
+  @media screen and (min-width: $big-mobile) {
+    height: 6rem;
+  }
 
   .wrapper {
     height: 100%;
@@ -72,64 +87,185 @@ header {
 }
 
 .logo {
-  height: 100%;
+  height: 6rem;
+  display: block;
+  margin: 0 auto;
   padding: 1rem 0;
-  float: left;
+
+  @media screen and (min-width: $big-mobile) {
+    height: 100%;
+    float: left;
+  }
 }
 
 .navigation {
-  float: right;
+  width: 100%;
+  overflow: hidden;
+
+  @media screen and (min-width: $big-mobile) {
+    float: right;
+    width: auto;
+  }
 }
 
 .nav-item {
   display: inline-block;
   float: left;
+  width: 33.333%;
+  text-align: center;
+
+  @media screen and (min-width: $big-mobile) {
+    text-align: left;
+  }
 
   a {
-    line-height: 6rem;
-    padding: 0 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: $cyan;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    padding: 1rem 0;
+
+    @media screen and (min-width: $big-mobile) {
+      padding: 2.5rem 2rem 1.5rem;
+    }
+
+    &.active:after, &:hover:after {
+      content: "";
+      width: 100%;
+      height: 0.5rem;
+      position: absolute;
+      left: 0;
+      bottom: -0.5rem;
+      background-color: $cyan;
+    }
   }
 }
 
 .banner {
-  background: url("../images/pies.jpg") center center no-repeat;
-  background-size: cover;
-  height: 60%;
-  padding: 8rem 4rem;
+  background: url("../images/pies_small.jpg") center center no-repeat;
+  background-size: auto 100%;
+  background-position: center right;
+  height: 24rem;
+  padding: 1rem 0;
+
+  @media screen and (min-width: $big-mobile) {
+    background: url("../images/pies_big@x2.jpg") center center no-repeat;
+    background-size: cover;
+    background-position: auto;
+    height: 60%;
+    padding: 8rem 0;
+  }
+  
+  @media screen and (min-width: $big-desktop) {
+    .wrapper {
+      padding: 0 5rem;
+    }
+  }
+  @media screen and (min-width: $big-desktop) {
+    .wrapper {
+      padding: 0 12rem;
+    }
+  }
 }
 
 .banner-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 1rem 0;
   color: $dark;
   text-align: left;
+  width: 90%;
 
   .big-text {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
+
+  @media screen and (min-width: $big-mobile) {
+    font-size: 1.5rem;
+
+    .big-text {
+      font-size: 2rem;
+    }
+
+  }
+}
+.offers-container, .vets-container, .contact-container {
+  padding: 4rem 0;
 }
 
 .offer-item {
   @extend %three-column-list;
+
+  ul {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+.offer-icon {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: $cyan;
+  margin: 0 auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  .prevention & {
+    background-image: url("../images/icon-prevention.png");
+    background-size: 50%;
+  }
+
+  .diagnostics & {
+    background-image: url("../images/icon-diagnostics.png");
+    background-size: 50%;
+  }
+
+  .shop & {
+    background-image: url("../images/icon-shop.png");
+    background-size: 35%;
+  }
+
 }
 
 .service-item {
   margin: 0 0 1.5rem;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 0.5rem 0 0;
+    vertical-align: sub;
+    background: url("../images/icon-tick.png") center center no-repeat;
+    background-size: 100%;
+  }
 }
 
 .quote-wrapper {
   background-color: $blue-light;
-  padding: 4rem;
+  padding: 4rem 2rem;
+
+  @media screen and (min-width: $big-mobile) {
+    padding: 4rem;
+  }
 }
 
 .quote {
   max-width: 700px;
   margin: 0 auto;
-  width: 90%;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: $asphalt;
+
+  @media screen and (min-width: $big-mobile) {
+    width: 90%;
+    font-size: 1.5rem;
+
+  }
 }
 
 .quote-decor {
@@ -172,8 +308,8 @@ header {
 }
 
 .contact {
-  @extend %two-column-thing;
-  text-align: left;
+  float: left;
+  padding: 2rem;
 }
 
 .contact-section {
@@ -185,11 +321,41 @@ header {
 }
 
 .map {
-  @extend %two-column-thing;
-  text-align: right;
+  margin: 0 auto;
+  padding: 2rem;
+
+  .map-link {
+    display: block;
+    width: 100%;
+  }
+
+  .map-screen  {
+    width: 100%;
+  }
+
+  iframe {
+    display: none;
+  }
+  @media screen and (min-width: $big-mobile) {
+
+    .map-link {
+      display: none;
+    }
+
+    iframe {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 950px) {
+    float: right;
+  }
 }
 
-.google-map {
-  width: 80%;
-  margin: 0 4rem;
+footer {
+  background-color: $snow;
+  padding: 3rem;
+  color: #777;
+  font-size: 0.9rem;
+  text-align: center;
 }
