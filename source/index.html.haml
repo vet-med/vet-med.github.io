@@ -36,9 +36,11 @@
 %section.quote-wrapper
   .quote
     .quote-decor ”
-    - quote = data.quotes.sample
-    %p.quote-content= quote.content
-    %p.quote-author - #{quote.author}
+    .quotes
+      - data.quotes.each do |quote|
+        .quote-element
+          %p.quote-content= quote.content
+          %p.quote-author - #{quote.author}
 %section.wrapper.vets-container#vets
   %h1 Nasi lekarze
   %ul.vets
@@ -51,9 +53,11 @@
 %section.quote-wrapper
   .quote
     .quote-decor ”
-    - quote = data.quotes.sample
-    %p.quote-content= quote.content
-    %p.quote-author - #{quote.author}
+    .quotes
+      - data.quotes.each do |quote|
+        .quote-element
+          %p.quote-content= quote.content
+          %p.quote-author - #{quote.author}
 %section.wrapper.contact-container#contact
   %h1 Kontakt
   .contact

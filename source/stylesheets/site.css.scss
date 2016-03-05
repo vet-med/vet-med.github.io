@@ -254,6 +254,7 @@ header {
 }
 
 .quote {
+  position: relative;
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
@@ -358,4 +359,14 @@ footer {
   color: #777;
   font-size: 0.9rem;
   text-align: center;
+}
+
+.quote-element {
+  position: absolute;
+  opacity: 0;
+}
+
+.quote-visible {
+  position: relative;
+  opacity: 1;
 }

@@ -17,3 +17,6 @@ activate :deploy do |deploy|
   deploy.commit_message = 'Deploy :rocket:'
   deploy.build_before = true
 end
+
+activate :sprockets
+activate :es6
