@@ -354,16 +354,13 @@ th {
   padding: 0; }
 
 .offer-item, .vet {
-  text-align: center; }
+  text-align: center;
+  margin: 0 0 4rem; }
   @media screen and (min-width: 768px) {
     .offer-item, .vet {
       width: 33.333%;
-      float: left; } }
-
-@media screen and (min-width: 768px) {
-  .contact, .map {
-    width: 50%;
-    float: left; } }
+      float: left;
+      margin: 0; } }
 
 * {
   -moz-box-sizing: border-box;
@@ -392,7 +389,7 @@ body {
 h1 {
   color: #20CFE4;
   text-align: center;
-  margin: 3rem 0; }
+  margin: 0 0 3rem; }
 
 section {
   overflow: hidden; }
@@ -402,56 +399,158 @@ section {
   margin: 0 auto;
   padding: 0 2rem; }
 
+.header-wrapper {
+  max-width: 1420px;
+  margin: 0 auto;
+  height: 100%; }
+  @media screen and (min-width: 768px) {
+    .header-wrapper {
+      padding: 0 2rem; } }
+
 header {
-  height: 6rem;
   border-bottom: 0.5rem solid #e7f8fc; }
+  @media screen and (min-width: 768px) {
+    header {
+      height: 6rem; } }
   header .wrapper {
     height: 100%; }
 
 .logo {
-  height: 100%;
-  padding: 1rem 0;
-  float: left; }
+  height: 6rem;
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 0; }
+  @media screen and (min-width: 768px) {
+    .logo {
+      height: 100%;
+      float: left; } }
 
 .navigation {
-  float: right; }
+  width: 100%;
+  overflow: hidden; }
+  @media screen and (min-width: 768px) {
+    .navigation {
+      float: right;
+      width: auto; } }
 
 .nav-item {
   display: inline-block;
-  float: left; }
+  float: left;
+  width: 33.333%;
+  text-align: center; }
+  @media screen and (min-width: 768px) {
+    .nav-item {
+      text-align: left; } }
   .nav-item a {
-    line-height: 6rem;
-    padding: 0 2rem; }
+    font-weight: 600;
+    text-decoration: none;
+    color: #20CFE4;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    padding: 1rem 0; }
+    @media screen and (min-width: 768px) {
+      .nav-item a {
+        padding: 2.5rem 2rem 1.5rem; } }
+    .nav-item a.active:after, .nav-item a:hover:after {
+      content: "";
+      width: 100%;
+      height: 0.5rem;
+      position: absolute;
+      left: 0;
+      bottom: -0.5rem;
+      background-color: #20CFE4; }
 
 .banner {
-  background: url("../images/pies.jpg") center center no-repeat;
-  background-size: cover;
-  height: 60%;
-  padding: 8rem 4rem; }
+  background: url("../images/pies_small.jpg") center center no-repeat;
+  background-size: auto 100%;
+  background-position: center right;
+  height: 24rem;
+  padding: 1rem 0; }
+  @media screen and (min-width: 768px) {
+    .banner {
+      background: url("../images/pies_big@x2.jpg") center center no-repeat;
+      background-size: cover;
+      background-position: auto;
+      height: 60%;
+      padding: 8rem 0; } }
+  @media screen and (min-width: 1420px) {
+    .banner .wrapper {
+      padding: 0 5rem; } }
+  @media screen and (min-width: 1420px) {
+    .banner .wrapper {
+      padding: 0 12rem; } }
 
 .banner-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 1rem 0;
   color: #333;
-  text-align: left; }
+  text-align: left;
+  width: 90%; }
   .banner-title .big-text {
-    font-size: 2rem; }
+    font-size: 1.7rem; }
+  @media screen and (min-width: 768px) {
+    .banner-title {
+      font-size: 1.5rem; }
+      .banner-title .big-text {
+        font-size: 2rem; } }
+
+.offers-container, .vets-container, .contact-container {
+  padding: 4rem 0; }
+
+.offer-item ul {
+  display: inline-block;
+  text-align: left; }
+
+.offer-icon {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: #20CFE4;
+  margin: 0 auto;
+  background-position: center center;
+  background-repeat: no-repeat; }
+  .prevention .offer-icon {
+    background-image: url("../images/icon-prevention.png");
+    background-size: 50%; }
+  .diagnostics .offer-icon {
+    background-image: url("../images/icon-diagnostics.png");
+    background-size: 50%; }
+  .shop .offer-icon {
+    background-image: url("../images/icon-shop.png");
+    background-size: 35%; }
 
 .service-item {
   margin: 0 0 1.5rem; }
+  .service-item:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 0.5rem 0 0;
+    vertical-align: sub;
+    background: url("../images/icon-tick.png") center center no-repeat;
+    background-size: 100%; }
 
 .quote-wrapper {
   background-color: #e7f8fc;
-  padding: 4rem; }
+  padding: 4rem 2rem; }
+  @media screen and (min-width: 768px) {
+    .quote-wrapper {
+      padding: 4rem; } }
 
 .quote {
+  position: relative;
   max-width: 700px;
   margin: 0 auto;
-  width: 90%;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #1A1A4E; }
+  @media screen and (min-width: 768px) {
+    .quote {
+      width: 90%;
+      font-size: 1.5rem; } }
 
 .quote-decor {
   margin: 0 auto;
@@ -483,7 +582,8 @@ header {
   margin: 1rem auto; }
 
 .contact {
-  text-align: left; }
+  float: left;
+  padding: 2rem; }
 
 .contact-section {
   margin-bottom: 3rem; }
@@ -491,8 +591,43 @@ header {
     color: #20CFE4; }
 
 .map {
-  text-align: right; }
+  margin: 0 auto;
+  padding: 2rem; }
+  .map .map-link {
+    display: block;
+    width: 100%; }
+  .map .map-screen {
+    width: 100%; }
+  .map iframe {
+    display: none; }
+  @media screen and (min-width: 768px) {
+    .map .map-link {
+      display: none; }
+    .map iframe {
+      display: block; } }
+  @media screen and (min-width: 950px) {
+    .map {
+      float: right; } }
 
-.google-map {
-  width: 80%;
-  margin: 0 4rem; }
+footer {
+  background-color: #f2f2f2;
+  padding: 3rem;
+  color: #777;
+  font-size: 0.9rem;
+  text-align: center; }
+
+.quote-element {
+  position: absolute;
+  opacity: 0; }
+
+.quote-visible {
+  position: relative;
+  opacity: 1; }
+
+.credits {
+  color: #A0A0A0;
+  margin: 1rem 0 0;
+  font-size: 0.8rem; }
+  .credits a {
+    color: #a0a0a0;
+    text-decoration: none; }
